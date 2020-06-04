@@ -1,0 +1,7 @@
+<div class="container-fluid mt-5" style="max-width: 800px;">
+  <%= form_with model: @post, local: true do |f| %>
+    <p><%= f.label :title, "タイトル" %> <%= f.text_area :title %></p>
+    <%= f.rich_text_area :content %>
+    <p><%= f.submit "送信" %></p>
+  <% end %>
+</div>
