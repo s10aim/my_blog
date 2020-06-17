@@ -4,6 +4,6 @@ require("@rails/activestorage").start();
 require("channels");
 require("bootstrap/dist/js/bootstrap");
 
-require("@fortawesome/fontawesome-free");
+require("@fortawesome/fontawesome-free/js/all")
 require("trix");
 require("@rails/actiontext");
