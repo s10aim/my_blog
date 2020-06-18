@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'favorites/index'
+  resources :favorites, only: [:index]
   resources :posts
   devise_for :users
 
