@@ -18,7 +18,9 @@
     <%= favicon_link_tag 'favicon.png', rel: 'apple-touch-icon'%>
   </head>
   <body>
-    <%= render 'layouts/header' %>
-    <%= yield %>
+    <div class="wrapper <%= 'bg-lighten' if controller_name != 'top' %>">
+      <%= render 'layouts/header' %>
+      <%= yield %>
+    </div>
   </body>
 </html>
