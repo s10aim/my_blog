@@ -1,0 +1,29 @@
+// background-image: image-url("IMG_46242.JPG");
+// background-size: cover;
+
+html,
+body,
+div.wrapper {
+  height: 100%;
+}
+
+@media screen and (orientation: portrait) {
+  body {
+    background-image: image-url("IMG_9310.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  body {
+    background-image: image-url("IMG_9862.JPG");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.bg-lighten {
+  background-color: rgba(255, 255, 255, 0.3);
+}

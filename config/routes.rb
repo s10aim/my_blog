@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root to: "top#index"
+  resources :top, only: [:index]
   resources :favorites, only: [:index]
   resources :posts
   devise_for :users
