@@ -17,6 +17,7 @@ gem 'rails-i18n', '~> 6.0'
 gem 'devise-i18n'
 gem 'devise-bootstrap-views', '~> 1.0'
 gem 'aws-sdk-s3', require: false
+gem 'kaminari'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
