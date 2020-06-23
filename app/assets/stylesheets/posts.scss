@@ -1,3 +1,20 @@
-// Place all the styles related to the posts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+a.page-link {
+  background-color: transparent;
+}
+
+.pagination>li>a {
+  border: none;
+  color: #696969;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: rgba(0, 0, 0, 0.125);
+  border-color: rgba(0, 0, 0, 0.125);
+  border-radius: 50%;
+}
+
+.page-item .page-link:hover {
+  color: #696969;
+  background-color: transparent;
+  border-radius: 50%;
+}

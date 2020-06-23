@@ -1,9 +1,11 @@
 class PostsController < ApplicationController
   before_action :set_post, only: %i[show edit update destroy]
   before_action :authenticate_user!, except: %i[index show]
+  PER_PAGE = 7
 
   def index
     @posts = Post.order(id: :desc)
+    @posts = Post.page(params[:page]).per(PER_PAGE)
   end
 
   def new
