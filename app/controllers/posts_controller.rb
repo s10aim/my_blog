@@ -4,8 +4,7 @@ class PostsController < ApplicationController
   PER_PAGE = 7
 
   def index
-    @posts = Post.order(id: :desc)
-    @posts = Post.page(params[:page]).per(PER_PAGE)
+    @posts = Post.order(id: :desc).page(params[:page]).per(PER_PAGE)
   end
 
   def new
