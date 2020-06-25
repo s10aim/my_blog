@@ -2,6 +2,6 @@
   <%= form_with model: @post, local: true do |f| %>
     <p><%= f.label :title %> <%= f.text_area :title %></p>
     <%= f.rich_text_area :content %>
-    <p><%= f.submit "送信" %></p>
+    <p><%= f.submit "送信", id: 'btn', disabled: true %></p>
   <% end %>
 </div>
