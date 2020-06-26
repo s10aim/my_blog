@@ -2,4 +2,5 @@
   <h2><%= simple_format(@post.title) %></h2>
   <p style="color: #696969;"><%= l @post.created_at, format: :default %></p>
   <p><%= @post.content %></p>
+  <p style="margin-top: 3rem;"><%= link_to "戻る", posts_path, class: "btn btn-outline-info" %></p>
 </div>
