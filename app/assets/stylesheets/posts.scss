@@ -22,3 +22,9 @@ a.page-link {
 .pagination {
   justify-content: center;
 }
+
+.text-content * {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
