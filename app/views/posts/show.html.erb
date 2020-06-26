@@ -1,3 +1,4 @@
 <h1>詳細表示</h1>
 <p><%= simple_format(@post.title) %></p>
+<p><%= l @post.created_at, format: :default %></p>
 <p><%= @post.content %></p>

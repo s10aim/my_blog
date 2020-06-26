@@ -13,3 +13,7 @@ ja:
       post:
         title: タイトル
         content: 本文
+  time:
+    formats:
+      default: "%Y/%-m/%d %H:%M"
+      short: "%-m/%d %H:%M"
