@@ -1,7 +1,7 @@
 <div class="card border-dark  bg-transparent mb-3 mx-auto" style="max-width: 18rem;">
   <div class="card-body text-dark">
     <h5 class="card-title"><%= simple_format(post.title) %></h5>
-    <%= l post.created_at, format: :short %>
+    <p style="color: #696969;"><%= l post.created_at, format: :short %></p>
     <div class="text-content">
       <%= post.content %>
     </div>
