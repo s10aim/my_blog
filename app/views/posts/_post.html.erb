@@ -1,4 +1,4 @@
-<div class="card border-dark  bg-transparent mb-3 mx-auto" style="max-width: 18rem;">
+<div class="card border-dark  bg-transparent mb-3 mx-auto" id="post-<%= post.id %>" style="max-width: 18rem;">
   <%= link_to post, class: "card-body text-dark" do %>
     <p style="text-align: left; color: #696969;"><%= l post.created_at, format: :short %></p>
     <h5 class="card-title"><%= simple_format(post.title) %></h5>

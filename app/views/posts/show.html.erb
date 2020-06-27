@@ -12,5 +12,5 @@
   <h2><%= simple_format(@post.title) %></h2>
   <p style="color: #696969;"><%= l @post.created_at, format: :default %></p>
   <p><%= @post.content %></p>
-  <p style="margin-top: 3rem;"><%= link_to "戻る", posts_path, class: "btn btn-outline-info" %></p>
+  <%= link_to "戻る", "/posts?page=#{@page}#post-#{@post.id}" , class: "btn btn-outline-info mt-5", data: { turbolinks: false } %>
 </div>

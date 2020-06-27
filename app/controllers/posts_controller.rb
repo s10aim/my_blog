@@ -18,6 +18,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    @page = Post.order(id: :desc).ids.index(@post.id) / 7 + 1
   end
 
   def edit
