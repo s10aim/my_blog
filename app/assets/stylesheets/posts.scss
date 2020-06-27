@@ -23,7 +23,7 @@ a.page-link {
   justify-content: center;
 }
 
-.text-content * {
+.text-content div {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -31,4 +31,12 @@ a.page-link {
 
 .content-btn {
   text-align: right;
+}
+
+.card-body {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.card-body:hover {
+  text-decoration: none;
 }
