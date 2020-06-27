@@ -1,7 +1,8 @@
 <div class="container-fluid mt-5" style="max-width: 800px;">
   <%= form_with model: @post, local: true do |f| %>
-    <p><%= f.label :title %> <%= f.text_area :title %></p>
+    <%= f.label :title %>
+    <div class="blog-title"><%= f.text_area :title, class: "form-control" %></div>
     <%= f.rich_text_area :content %>
-    <p><%= f.submit "送信", id: 'btn', disabled: true %></p>
+    <p style="margin-top: 2rem;"><%= f.submit "送信", class: "btn btn-outline-primary", id: 'btn', disabled: true %></p>
   <% end %>
 </div>
