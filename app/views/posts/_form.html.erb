@@ -3,6 +3,6 @@
     <%= f.label :title %>
     <div class="blog-title"><%= f.text_area :title, class: "form-control" %></div>
     <%= f.rich_text_area :content %>
-    <p style="margin-top: 2rem;"><%= f.submit "送信", class: "btn btn-outline-primary", id: 'btn', disabled: true %></p>
+    <%= f.submit "送信", class: "btn btn-outline-primary mt-5", id: 'btn', disabled: true %>
   <% end %>
 </div>
