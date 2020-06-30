@@ -3,7 +3,12 @@
     <p style="text-align: left; color: #696969;"><%= l post.created_at, format: :short %></p>
     <h5 class="card-title"><%= simple_format(post.title) %></h5>
     <div class="text-content">
-      <%= post.content %>
+      <%# 画像は無視して本文の1行目の投稿を表示 %>
+      <p class="content-letter"><%= post.content.body.to_plain_text.gsub(/\[.+[bmp|png|jpg|jpeg|JPG|PNG|JPEG]\]/,"").split(/\n/).reject(&:empty?).first %></p>
+      <%# 画像がある場合は一つ目の画像を表示 %>
+      <% if post.content.embeds_blobs.present? %>
+        <%= image_tag post.content.embeds_blobs.first %>
+      <% end %>
     </div>
   <% end %>
 </div>

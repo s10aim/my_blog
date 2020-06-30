@@ -23,12 +23,6 @@ a.page-link {
   justify-content: center;
 }
 
-.text-content div {
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
 .content-btn {
   text-align: right;
 }
@@ -45,4 +39,15 @@ a.page-link {
   width: 12rem;
   margin-bottom: 2rem;
   background-color: transparent;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.content-letter {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
