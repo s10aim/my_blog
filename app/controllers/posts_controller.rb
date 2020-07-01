@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   PER_PAGE = 7
 
   def index
-    @posts = Post.order(id: :desc).page(params[:page]).per(PER_PAGE)
+    @posts = Post.order(id: :desc).page(params[:page]).per(PER_PAGE).all.with_rich_text_content_and_embeds
   end
 
   def new
@@ -18,6 +18,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    @page = Post.order(id: :desc).ids.index(@post.id) / PER_PAGE + 1
   end
 
   def edit

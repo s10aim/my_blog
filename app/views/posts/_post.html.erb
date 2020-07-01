@@ -1,8 +1,14 @@
-<div>
-  <%= simple_format(post.title) %>
-  <%= l post.created_at, format: :short %>
-  <%= link_to "詳細", post_path(post) %>
-  <%= link_to "編集", edit_post_path(post) %>
-  <%= link_to "削除", post_path(post), method: :delete, data: { confirm: "削除しますか?" }  %>
-  <hr>
+<div class="card border-dark  bg-transparent mb-3 mx-auto" id="post-<%= post.id %>" style="max-width: 18rem;">
+  <%= link_to post, class: "card-body text-dark" do %>
+    <p style="text-align: left; color: #696969;"><%= l post.created_at, format: :short %></p>
+    <h5 class="card-title"><%= simple_format(post.title) %></h5>
+    <div class="text-content">
+      <%# 画像は無視して本文の1行目の投稿を表示 %>
+      <p class="content-letter"><%= post.content.body.to_plain_text.gsub(/\[.+[bmp|png|jpg|jpeg|JPG|PNG|JPEG]\]/,"").split(/\n/).reject(&:empty?).first %></p>
+      <%# 画像がある場合は一つ目の画像を表示 %>
+      <% if post.content.embeds_blobs.present? %>
+        <%= image_tag post.content.embeds_blobs.first %>
+      <% end %>
+    </div>
+  <% end %>
 </div>

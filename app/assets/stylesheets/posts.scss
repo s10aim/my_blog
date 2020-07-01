@@ -18,3 +18,36 @@ a.page-link {
   background-color: transparent;
   border-radius: 50%;
 }
+
+.pagination {
+  justify-content: center;
+}
+
+.content-btn {
+  text-align: right;
+}
+
+.card-body {
+  background-color: rgba(255, 255, 255, 0.3);
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.blog-title .form-control {
+  width: 12rem;
+  margin-bottom: 2rem;
+  background-color: transparent;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.content-letter {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

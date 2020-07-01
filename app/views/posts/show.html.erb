@@ -1,4 +1,16 @@
-<h1>詳細表示</h1>
-<p><%= simple_format(@post.title) %></p>
-<p><%= l @post.created_at, format: :default %></p>
-<p><%= @post.content %></p>
+<div class="container-fluid mt-5" style="max-width: 600px;">
+  <div class="content-btn">
+    <% if user_signed_in? %>
+      <%= link_to edit_post_path(@post), class: "btn btn-outline-success" do %>
+        <i class="far fa-edit"></i>
+      <% end %>
+      <%= link_to post_path(@post), class: "btn btn-outline-danger", method: :delete, data: { confirm: "削除しますか?" }  do %>
+        <i class="far fa-trash-alt"></i>
+      <% end %>
+    <% end %>
+  </div>
+  <h2><%= simple_format(@post.title) %></h2>
+  <p style="color: #696969;"><%= l @post.created_at, format: :default %></p>
+  <p><%= @post.content %></p>
+  <%= link_to "戻る", "/posts?page=#{@page}#post-#{@post.id}" , class: "btn btn-outline-info my-5", data: { turbolinks: false } %>
+</div>

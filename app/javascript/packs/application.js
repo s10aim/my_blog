@@ -15,6 +15,7 @@ document.addEventListener('turbolinks:load', () => {
   const btn = document.getElementById("btn")
 
   if (formTitle) {
+    btn.disabled = !(formTitle.value && formContent.value);
     [formTitle, formContent].forEach((form) => {
       form.addEventListener('keyup', () => {
         btn.disabled = !(formTitle.value && formContent.value)
