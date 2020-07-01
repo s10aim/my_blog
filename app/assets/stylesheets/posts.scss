@@ -29,10 +29,10 @@ a.page-link {
 
 .card-body {
   background-color: rgba(255, 255, 255, 0.3);
-}
 
-.card-body:hover {
-  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 .blog-title .form-control {
